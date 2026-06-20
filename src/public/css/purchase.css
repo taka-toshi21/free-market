@@ -1,0 +1,136 @@
+.purchase__content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+.purchase__top-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.purchase__item-block {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+}
+
+.purchase__item-img {
+    width: 180px;
+    height: 180px;
+    background: #ddd;
+    flex-shrink: 0;
+}
+
+.purchase__item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.purchase__item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.purchase__item-name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.purchase__item-price {
+    font-size: 28px;
+}
+
+.purchase__table {
+    width: 380px;
+}
+
+.purchase__table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.purchase__table td {
+    border: 1px solid #999;
+    padding: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.purchase__bottom-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 50px;
+}
+
+.purchase__bottom-area form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.purchase__info {
+    flex: 1;
+}
+
+.purchase__group {
+    border-top: 1px solid #999;
+    padding: 30px 20px;
+}
+
+.purchase__group:last-child {
+    border-bottom: 1px solid #999;
+}
+
+.purchase__group-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.purchase__group-title span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.purchase__group-title a {
+    text-decoration: none;
+    color: #0073cc;
+    font-size: 14px;
+}
+
+.purchase__group-content {
+    padding-left: 40px;
+}
+
+.purchase__group-content select {
+    width: 220px;
+    height: 36px;
+}
+
+.purchase__button {
+    width: 380px;
+}
+
+.purchase__button-submit {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 4px;
+    background: #ff5b5b;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.purchase__button-submit:hover {
+    opacity: 0.9;
+}

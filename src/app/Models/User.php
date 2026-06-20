@@ -20,8 +20,19 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'postal',
+        'address',
+        'building',
         'password',
     ];
+
+    public function items(){
+        return $this->hasMany('App\Models\Item');
+    }
+
+    public function likedItems(){
+        return $this->belongsToMany(Item::class, 'likes');
+    }
 
     /**
      * The attributes that should be hidden for serialization.
