@@ -23,3 +23,4 @@
 - nginx 1.21.1
 
 ## ER図
+<img width="1551" height="772" alt="free-market-er" src="https://github.com/user-attachments/assets/6df2793c-a901-4a19-b3f8-651e7538209a" />
