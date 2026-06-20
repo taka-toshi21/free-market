@@ -174,3 +174,9 @@
 .form__button-submit:hover {
     opacity: 0.85;
 }
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}

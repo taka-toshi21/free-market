@@ -42,6 +42,11 @@
                 </div>
                 @endforeach
             </div>
+            <div class="form__error">
+                @error('categories[]')
+                {{ $message }}
+                @enderror
+            </div>
         </div>
         <div class="form__group">
             <div class="form__group-title">
@@ -55,6 +60,11 @@
                     <option value="やや傷や汚れあり">やや傷や汚れあり</option>
                     <option value="状態が悪い">状態が悪い</option>
                 </select>
+                <div class="form__error">
+                    @error('status')
+                    {{ $message }}
+                    @enderror
+                </div>
             </div>
         </div>
         <div class="form__chapter-title">
@@ -67,6 +77,11 @@
             <div class="form__group-content">
                 <div class="form__input-text">
                     <input type="text" name="name">
+                </div>
+                <div class="form__error">
+                    @error('name')
+                    {{ $message }}
+                    @enderror
                 </div>
             </div>
         </div>
@@ -88,6 +103,11 @@
                 <div class="form__input-textarea">
                     <textarea name="description"></textarea>
                 </div>
+                <div class="form__error">
+                    @error('description')
+                    {{ $message }}
+                    @enderror
+                </div>
             </div>
         </div>
         <div class="form__group">
@@ -97,6 +117,11 @@
             <div class="form__group-content">
                 <div class="form__input-price">
                     <input type="text" name="price">
+                </div>
+                <div class="form__error">
+                    @error('price')
+                    {{ $message }}
+                    @enderror
                 </div>
             </div>
         </div>

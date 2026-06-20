@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
 use App\Models\Item;
 use App\Models\Purchase;
+use App\Http\Requests\PurchaseRequest;
+use App\Http\Requests\addressRequest;
+use App\Http\Requests\ExhibitionRequest;
 
 class MarketController extends Controller
 {
@@ -78,7 +81,7 @@ class MarketController extends Controller
 
 
     //出品登録
-    public function store(Request $request){
+    public function store(ExhibitionRequest $request){
         $item = new Item(
             $request -> only(['image', 'status', 'name', 'brand', 'description', 'price'])
         );
@@ -106,7 +109,7 @@ class MarketController extends Controller
     }
 
     //商品購入登録
-    public function buy(Request $request, $item_id){
+    public function buy(PurchaseRequest $request, $item_id){
         Purchase::create([
             'item_id' => $item_id,
             'user_id' => Auth::id(),
@@ -128,7 +131,7 @@ class MarketController extends Controller
     }
 
     //購入商品送り先住所更新処理
-    public function destination(Request $request, $item_id){
+    public function destination(AddressRequest $request, $item_id){
         session([
             'purchase_postal' => $request->postal,
             'purchase_address' => $request->address,

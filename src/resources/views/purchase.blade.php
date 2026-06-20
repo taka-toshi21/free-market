@@ -44,6 +44,11 @@
                             <option value="カード支払い">カード支払い</option>
                         </select>
                     </div>
+                    <div class="form__error">
+                        @error('payment')
+                        {{ $message }}
+                        @enderror
+                    </div>
                 </div>
                 <div class="purchase__group">
                     <div class="purchase__group-title">
@@ -56,6 +61,12 @@
                         <span>{{ session('purchase_address', auth()->user()->address) }}</span>
                         <br>
                         <span>{{ session('purchase_building', auth()->user()->building) }}</span>
+                        <input type="hidden" name="address" value="{{ session('purchase_address', auth()->user()->address) }}">
+                    </div>
+                    <div class="form__error">
+                        @error('address')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>

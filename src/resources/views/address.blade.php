@@ -19,6 +19,11 @@
                 <div class="form__input-text">
                     <input type="text" name="postal" value="{{ old('postal', auth()->user()->postal) }}">
                 </div>
+                <div class="form__error">
+                    @error('postal')
+                    {{ $message }}
+                    @enderror
+                </div>
             </div>
         </div>
         <div class="form__group">
@@ -28,6 +33,11 @@
             <div class="form__group-content">
                 <div class="form__input-text">
                     <input type="text" name="address" value="{{ old('address', auth()->user()->address) }}">
+                </div>
+                <div class="form__error">
+                    @error('address')
+                    {{ $message }}
+                    @enderror
                 </div>
             </div>
         </div>
