@@ -8,6 +8,7 @@
 - cp.env.example.env，環境変数を適宜変更
 - php artisan key:generate
 - php artisan migrate
+- 会員登録を二人分追加
 - php artisan db:seed
 
 ## 開発環境
