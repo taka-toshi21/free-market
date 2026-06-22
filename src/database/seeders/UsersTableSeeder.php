@@ -14,24 +14,23 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $user = [
-            'name' => 'test1',
-            'email' => '1111@example.com',
-            'postal' => null,
-            'address' => null,
-            'building' => null,
-            'password' => Hash::make('password'),
-        ];
-        DB::table('users')->insert($user);
-
-        $user = [
+        User::insert([
+            [
+                'name' => 'test1',
+                'email' => '1111@example.com',
+                'postal' => null,
+                'address' => null,
+                'building' => null,
+                'password' => Hash::make('password'),
+            ],
+            [
             'name' => 'test2',
             'email' => '2222@example.com',
             'postal' => null,
             'address' => null,
             'building' => null,
             'password' => Hash::make('password'),
-        ];
-        DB::table('users')->insert($user);
+            ],
+        ]);
     }
 }
